@@ -38,7 +38,7 @@ export default function Home() {
         <ul className="mt-4">
           <Link href="/blog/interview-preparation">
             <li className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-transform transition-shadow duration-300 cursor-pointer max-w-sm">
-              <img
+              <Image
                 src={BlogImage}
                 alt="Blog Image"
                 width={300}
