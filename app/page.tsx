@@ -25,7 +25,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Find IT Jobs in USA | Career Advice Job Portal for Students | JobsnProfiles",
     description: "Search latest IT jobs in the USA. Explore JobsnProfiles for job listings, career advice, and employer opportunities.",
-    images: ["https://jobsnprofiles.com/og-jobsnprofiles-app.jpg"],
+    images: ["https://jobsnprofiles.com/blog-19-2.png"],
   },
 };
 
