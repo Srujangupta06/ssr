@@ -1,17 +1,44 @@
+// app/page.js
 import Image from "next/image";
-import BlogImage from '@/assets/blog-19-2.png'
 import Link from "next/link";
+import BlogImage from "@/assets/blog-19-2.png";
+
+// Export metadata for SEO + Open Graph
+export const metadata = {
+  title: "My Blog Home",
+  description: "Read awesome blogs about interview preparation, React, and more!",
+  openGraph: {
+    title: "My Blog Home",
+    description: "Read awesome blogs about interview preparation, React, and more!",
+    type: "website",
+    url: "https://jobsnprofiles.com",
+    images: [
+      {
+        url: "https://jobsnprofiles.com/blog-19-2.png",
+        width: 800,
+        height: 600,
+        alt: "Blog Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Find IT Jobs in USA | Career Advice Job Portal for Students | JobsnProfiles",
+    description: "Search latest IT jobs in the USA. Explore JobsnProfiles for job listings, career advice, and employer opportunities.",
+    images: ["https://jobsnprofiles.com/og-jobsnprofiles-app.jpg"],
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center  min-h-screen py-2">
+    <div className="flex flex-col items-center min-h-screen py-2">
       <h1 className="text-xl font-semibold">Home Page</h1>
       <div className="mt-10">
-        <h1>Blogs</h1>
+        <h2>Blogs</h2>
         <ul className="mt-4">
-          <Link href={`/blog/interview-preparation`}>
+          <Link href="/blog/interview-preparation">
             <li className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-transform transition-shadow duration-300 cursor-pointer max-w-sm">
-              <Image
+              <img
                 src={BlogImage}
                 alt="Blog Image"
                 width={300}
@@ -26,7 +53,8 @@ export default function Home() {
                   Learn how to prepare for interviews and ace them.
                 </p>
               </div>
-            </li></Link>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
