@@ -1,0 +1,9 @@
+[build]
+  command = "next build && next export"
+  publish = "out"   # Next.js static export folder
+
+# Redirect all routes to index.html for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
